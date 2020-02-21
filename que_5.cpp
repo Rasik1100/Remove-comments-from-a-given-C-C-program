@@ -1,8 +1,5 @@
-// Name     : Rasik Mahajan
-// id       : 201701055
-// Course   : Compiler Design
-// Question : 5/6
-// Lab_no.  : 1
+// Name        : Rasik Mahajan
+// Description : Program to remove the comments from the C/C++ Programs 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -14,7 +11,7 @@ using namespace std;
 bool is_space(string line){
 	bool tmp=true;
 	for(int i=0;i<line.len;i++)
-		if(line[i]!=' ')
+		if(!isspace(line[i]))
 			tmp=false;
 	return tmp;
 }

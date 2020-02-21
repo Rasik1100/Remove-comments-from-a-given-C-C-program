@@ -8,7 +8,7 @@ using namespace std;
 #define pb push_back
 #define sz size()
 
-bool is_space(string line){
+bool is_space(string line){                 // function to remove the line that only contents spaces like '\t', ' ' etc.
 	bool tmp=true;
 	for(int i=0;i<line.len;i++)
 		if(!isspace(line[i]))
@@ -18,7 +18,7 @@ bool is_space(string line){
 
 void function_call(vector<string>& code){
 	bool cmt=false;
-	vector<int> ptr;
+	vector<int> ptr;                    
 	vector<string> alt;
 	string tmp="";
 	for(int i=0;i<code.sz;i++){
@@ -51,7 +51,6 @@ void function_call(vector<string>& code){
 
 int main(){
 	int n;
-	cout << "Question 5" << endl;
 	cout << "Number's of line of code : " ;
 	cin >> n;
 	vector<string> code(n);

@@ -19,7 +19,7 @@ bool is_space(string line){
 	return tmp;
 }
 
-vector<int> f(vector<string>& code){
+void function_call(vector<string>& code){
 	bool cmt=false;
 	vector<int> ptr;
 	vector<string> alt;
@@ -49,7 +49,7 @@ vector<int> f(vector<string>& code){
 	}
 	code.clear();
 	code=alt;
-	return 
+	return ;
 }
 
 int main(){
@@ -62,14 +62,11 @@ int main(){
 	cin.ignore();
 	for(int i=0;i<n;i++)
 		getline(cin,code[i]);
-	line=f(code);
+	function_call(code);
 	cout << endl << "Output:" << endl;
 	for(int i=0;i<code.sz;i++)
 		cout << code[i] << endl;
 	if(code.sz==0)
 		cout << "Whole given code is commented";
-	cout << "Following lines are commented : ";
-	for(int i=0;i<line.sz;i++)
-		cout << line[i] << " ";
 	return 0;
 }
